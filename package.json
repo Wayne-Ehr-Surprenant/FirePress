@@ -1,0 +1,73 @@
+{
+  "name": "firepress",
+  "version": "0.0.1",
+  "description": "A User frendly content manager",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node ./server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --exec babel-node ./server/index.js",
+    "lint": "eslint . --ext .js,.jsx"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wayne-Ehr-Surprenant/FirePress.git"
+  },
+  "author": "Wayne-Ehr-Surprenant",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Wayne-Ehr-Surprenant/FirePress/issues"
+  },
+  "homepage": "https://github.com/Wayne-Ehr-Surprenant/FirePress#readme",
+  "dependencies": {
+    "babel-plugin-transform-inline-environment-variables": "^0.4.3",
+    "babel-runtime": "^6.26.0",
+    "chalk": "^2.4.1",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "file-loader": "^1.1.11",
+    "svg-inline-loader": "^0.8.0",
+    "webpack": "^4.9.1",
+    "webpack-command": "^0.2.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "css-loader": "^0.28.11",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.8.2",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
+    "nodemon": "^1.17.5",
+    "pre-commit": "^1.2.2",
+    "style-loader": "^0.21.0"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "react",
+      "stage-0"
+    ],
+    "plugins": [
+      "transform-object-rest-spread",
+      "transform-runtime"
+    ]
+  },
+  "bin": {
+    "myapp": "./bin/www"
+  },
+  "pre-commit": [
+    "lint"
+  ]
+}
